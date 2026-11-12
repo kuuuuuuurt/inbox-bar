@@ -4,7 +4,7 @@
 # <swiftbar.hideRunInTerminal>true</swiftbar.hideRunInTerminal>
 # <swiftbar.hideLastUpdated>true</swiftbar.hideLastUpdated>
 # <swiftbar.hideDisappearPlugin>true</swiftbar.hideDisappearPlugin>
-"""Menu bar unread counts, read from open Chrome tabs. Refreshes every 30s."""
+"""Menu bar unread counts, read from open Chrome tabs. Refreshes every 10s."""
 import os
 import re
 import subprocess

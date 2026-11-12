@@ -4,7 +4,7 @@ A macOS menu bar icon that shows unread counts across the Gmail inboxes, Slack w
 
 The icon is a tray. When something is unread it gets a red badge with the total. Click it for a list grouped however you like (personal, work, side project), with each inbox's count. Click a line to jump straight to that tab.
 
-It runs as a [SwiftBar](https://swiftbar.app) plugin and checks every 30 seconds. There are no logins or API keys. It reads what's already on screen:
+It runs as a [SwiftBar](https://swiftbar.app) plugin and checks every 10 seconds. There are no logins or API keys. It reads what's already on screen:
 
 - **Gmail** puts the inbox count in the tab title ("Inbox (3) - ..."), so it reads Chrome's tab titles over AppleScript.
 - **Slack** does the same ("... - 2 new items - Slack").
@@ -29,7 +29,7 @@ Optional: `"shortcut"` in `config.json` sets a global hotkey that opens the menu
 
 ## Files
 
-- `plugins/inbox.30s.py`: the plugin. The `30s` in the name is SwiftBar's refresh interval.
+- `plugins/inbox.10s.py`: the plugin. The `10s` in the name is SwiftBar's refresh interval.
 - `focus.sh`: brings a Chrome tab to the front when you click a line.
 - `make_icons.swift`: draws the badge and row icons in `icons/`. Run `swift make_icons.swift` to regenerate.
 
