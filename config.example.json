@@ -1,0 +1,14 @@
+{
+  "groups": [
+    {"heading": "PERSONAL", "inboxes": [
+      {"label": "Personal Gmail", "type": "gmail", "match": "you@gmail.com"}
+    ]},
+    {"heading": "WORK", "inboxes": [
+      {"label": "Work Gmail", "type": "gmail", "match": "@yourcompany.com"},
+      {"label": "Google Chat", "type": "dock_app", "app": "Google Chat"}
+    ]},
+    {"heading": "SIDE PROJECT", "inboxes": [
+      {"label": "Team Slack", "type": "slack", "match": "Workspace Name"}
+    ]}
+  ]
+}
