@@ -19,6 +19,8 @@ It runs as a [SwiftBar](https://swiftbar.app) plugin and checks every 30 seconds
 
 The first run will ask to let SwiftBar control Chrome. Say yes.
 
+Optional: `"shortcut"` in `config.json` sets a global hotkey that opens the menu (e.g. `CMD+OPTION+CTRL+I`). I map a spare key on my keyboard to it.
+
 ## Limits
 
 - The tab has to be open. That's the whole trick.

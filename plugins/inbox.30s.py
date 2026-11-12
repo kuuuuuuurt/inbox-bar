@@ -27,7 +27,10 @@ ROOT = os.path.join(HERE, "..")
 #   slack     a Slack tab; optional "match" is text in its tab title, e.g. the workspace name
 #   dock_app  an installed app's Dock badge; "app" is its name, e.g. "Google Chat"
 with open(os.path.join(ROOT, "config.json")) as f:
-    GROUPS = json.load(f)["groups"]
+    CONFIG = json.load(f)
+GROUPS = CONFIG["groups"]
+# Optional global hotkey that opens the menu, e.g. "CMD+OPTION+CTRL+I"
+HOTKEY = f" shortcut={CONFIG['shortcut']}" if CONFIG.get("shortcut") else ""
 SURFACES = [i for g in GROUPS for i in g["inboxes"]]
 
 
@@ -142,9 +145,9 @@ if unread:
     dark = subprocess.run(["defaults", "read", "-g", "AppleInterfaceStyle"], capture_output=True, text=True).stdout.strip() == "Dark"
     icons = os.path.join(ROOT, "icons", "dark" if dark else "light")
     with open(os.path.join(icons, f"{name}.png"), "rb") as f:  # tray with red count badge (make_icons.swift)
-        print(f"| image={base64.b64encode(f.read()).decode()}")
+        print(f"| image={base64.b64encode(f.read()).decode()}{HOTKEY}")
 else:
-    print("| sfimage=tray")
+    print(f"| sfimage=tray{HOTKEY}")
 print("---")
 
 def row_icon(name, on):

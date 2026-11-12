@@ -1,4 +1,5 @@
 {
+  "shortcut": "CMD+OPTION+CTRL+I",
   "groups": [
     {"heading": "PERSONAL", "inboxes": [
       {"label": "Personal Gmail", "type": "gmail", "match": "you@gmail.com"}
